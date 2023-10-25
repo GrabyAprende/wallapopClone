@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    
+    <form id="registerBox">
+        <div class="inputBtn">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" size="30" placeholder="username@example.com" required>
+        </div>
+        <div class="inputBtn">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" minlength="8" placeholder="Escriba su contraseña" required>
+        </div>
+        <div class="inputBtn">
+            <label for="passwordRepeat">Repetir contraseña</label>
+            <input type="password" id="passwordRepeat" minlength="8" placeholder="Repita la contraseña" required>
+        </div>
+        <div>
+            <button type="submit">Crear una cuenta</button>
+        </div>
+    
+    </form>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
