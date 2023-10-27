@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./notifications/notifications.css">
+    <link rel="stylesheet" href="./register/register.css">
     <title>Register</title>
 </head>
 <body>
-    
+    <section id="notifications"></section>
     <form id="registerBox">
         <div class="inputBtn">
             <label for="email">Correo electrónico</label>
@@ -23,11 +26,11 @@
             <input type="password" id="passwordRepeat" minlength="8" placeholder="Repita la contraseña" required>
         </div>
         <div>
-            <button type="submit">Crear una cuenta</button>
+            <button id="submitBtn" type="submit">Crear una cuenta</button>
         </div>
     
     </form>
 
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./register/index.js"></script>
 </body>
 </html>

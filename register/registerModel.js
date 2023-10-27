@@ -20,7 +20,6 @@ export const createUser = async (email, password) => {
             const data = await response.json()
             throw new Error(data.message);
         }
-
     } catch (error) {
         if (error.message) {
             throw error.message; 
