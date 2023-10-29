@@ -1,44 +1,48 @@
+
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: Wallie, Helvetica;
     margin: 100px auto;
-    background-color: #ccc;
 }
 h1 {
-    font-family: Playpen Sans;
-    color: #13c1ac;
+    font-weight: bold;
 }
-#registerBox {
+h2 {
+    color: #459da0;
+}
+#login {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 5px;
 }
-.inputBtn label {
+.loginBox label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
+    width: 100%;
 }
-.inputBtn input {
+.loginBox input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    outline-color: #13c1ac;
     border-radius: 15px;
-    outline-color:#13c1ac ;
 }
-#submitBtn {
-    border-radius: 15px;
+.submitBtn {
     background-color: #13c1ac;
     padding: 10px;
     border: none;
+    border-radius: 15px;
+    margin-bottom: 10px;
     cursor: pointer;
     font-size: 16px;
-    width: 110%;
-    margin-top: 20px;
+    width: 105%;
 }
-#submitBtn:hover {
+.submitBtn:hover {
     background-color: #459da0;
 }

@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./login/login.css">
+    <link rel="stylesheet" href="./loader/loader.css">
     <title>Login</title>
 </head>
 <body>
+    <h1>¡Te damos la bienvenida!</h1>
     <form id="login">
         <div class="loginBox">
             <label for="email">Email</label>
@@ -15,8 +17,9 @@
         </div>
         <div class="loginBox">
         <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" required minlength="6"/>
+        <input type="password" id="password" name="password" minlength="8" required/>
         </div>
+    <h2>¿Has olvidado tu contraseña?</h2>
 
         <button class="submitBtn" type="submit">Iniciar Sesión</button>
     </form>

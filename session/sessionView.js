@@ -4,7 +4,9 @@ export const buildUnauthorizedSession = () => { //cuando no inicie sesion
 <ul>
     <li>
         <a href="./login.html">Login</a>
-        <a href="./signup.html">Sign up</a>
+    </li>
+    <li>
+        <a href="./register.html">Regístrate</a>
     </li>
 </ul>`;
 }

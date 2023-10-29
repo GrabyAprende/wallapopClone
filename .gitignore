@@ -1,14 +1,7 @@
 .vscode/
 node_modules/
-# Ignorar archivos de sistema
 .DS_Store
-
-# Ignorar archivos de respaldo creados por editores de texto
 *~
-
-# Ignorar archivos de configuración locales
 .env
-
-# Ignorar archivos de compilación
 *.o
 *.out

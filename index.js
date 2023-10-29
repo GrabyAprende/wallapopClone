@@ -1,26 +1,44 @@
-import { notificationsController } from "./notifications/notificationsController.js";
-//import { tweetListController } from "./tweetList/tweetListController.js";
-import { sessionController } from "./session/sessionContoller.js";
-
+import { notificationsController } from './notifications/notificationsController.js';
+import { advertListController } from './advertsList/advertListController.js';
+import { sessionController } from './session/sessionController.js';
+import { loaderController } from './loader/loaderController.js';
 
 const notifications = document.getElementById('notifications');
 
+
 const showNotification = notificationsController(notifications);
+const loader = document.getElementById('loader');
+const { show, hide } = loaderController(loader);
 
+document.addEventListener('DOMContentLoaded', () => {
+    const advertList = document.getElementById('adverts');
 
-//document.addEventListener('DOMContentLoaded', () => {  ANUNCIOS
-    //const tweetList = document.getElementById('tweets')
-    //tweetListController(tweetList);
-    
-    //tweetList.addEventListener('tweetsLoaded', (event) => {
-        //showNotification(event.detail.message, event.detail.type);
-    //});
-    
+    advertList.addEventListener('adsLoaded', (event) => {
+        showNotification(event.detail.message, event.detail.type)
+    })
+    advertList.addEventListener('startLoadingAds', () => {
+        show();
+    })
+    advertList.addEventListener('finishLoadingAds', () => {
+        hide();
+        showNotification("Anuncios cargados", "success");
+    })
+    advertList.addEventListener("error",  (event) => {
+        showNotification(event.detail.message, event.detail.type)
+        hide();
+    })
+
+    advertListController(advertList);
+
     const session = document.getElementById('session');
     sessionController(session);
-//})
 
-window.addEventListener('offline', () => { //avisa si el usuario se quedo sin conexion
-    showNotification('se perdió la conexión, error');
+    const bottonCreate = document.getElementById('adCreatBtn');
+bottonCreate.addEventListener('click', () => {
+    window.location.href = 'adCreation.html'
+})
+})
 
+window.addEventListener('offline', () => {
+    showNotification('Se ha perdido la conexión', 'error');
 })

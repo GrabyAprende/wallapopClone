@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear anuncio</title>
+    <link rel="stylesheet" href="./notifications/notifications.css" />
+    <link rel="stylesheet" href="./advertCreation/advertCreation.css">
+    <link rel="stylesheet" href="./loader/loader.css">
+    <script src="https://js.bytescale.com/sdk/v3"></script>
+    
+</head>
+<body>
+    <h1>¿Qué vas a vender?</h1>
+
+    <section id="notifications"></section>
+    <section id="loader"></section>
+    
+    <form id="advertCreation">
+        <label for="photo">Foto:</label>
+        <input type="file" id="photo" name="photo" required>
+    
+        <label for="adverName">Nombre:</label>
+        <input type="text" id="adverName" name="adverName" required>
+    
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" required></textarea>
+    
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" required>
+    
+        <label for="type">Compra/Venta:</label>
+        <select id="type" name="type" required>
+            <option value="compra">Compra</option>
+            <option value="venta">Venta</option>
+        </select>
+
+        <button class="btnCreate" type="submit">Crear anuncio</button>
+    </form>
+
+    <script type="module" src="./advertCreation/advertCreation.js"></script>
+</body>
+</html>

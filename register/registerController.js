@@ -28,8 +28,6 @@ const validateForm = async (event, registerForm) => {
             }
         }
     
-
-
 const isFormValid = (email, password, passwordConfirmation) => {
     const emailValidation = isEmailValid(email);
     const passwordValidation = isPasswordValid(password, passwordConfirmation);
