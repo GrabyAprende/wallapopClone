@@ -1,26 +1,27 @@
 import { sparrestApi } from "../utils/sparrestApi.js";
 
 const parseAdvertisement = (advertisement) => {
-    return {
-        photo: advertisement.photo,
-        adverName: advertisement.adverName,
-        description: advertisement.description,
-        price: advertisement.price,
-        type: advertisement.type,
-        id: advertisement.id,
-    }
-}
+  return {
+    photo: advertisement.photo,
+    adverName: advertisement.adverName,
+    description: advertisement.description,
+    price: advertisement.price,
+    type: advertisement.type,
+    id: advertisement.id,
+    userId: advertisement.userId,
+  };
+};
 
 export const getAdvertisement = async (advertisementId) => {
-    const endpoint = `api/adverts/${advertisementId}?_expand=user`;
+  const endpoint = `api/adverts/${advertisementId}?_expand=user`;
 
-    const advertisement = await sparrestApi().get(endpoint)
+  const advertisement = await sparrestApi().get(endpoint);
 
-    return parseAdvertisement(advertisement);
-}
+  return parseAdvertisement(advertisement);
+};
 
 export const deleteAdvertisement = async (advertisementId) => {
-    const endpoint = `api/adverts/${advertisementId}`;
+  const endpoint = `api/adverts/${advertisementId}`;
 
-    await sparrestApi().delete(endpoint);
-}
+  await sparrestApi().delete(endpoint);
+};
